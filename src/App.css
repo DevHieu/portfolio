@@ -1,0 +1,25 @@
+.container {
+  visibility: hidden;
+  transition: 1s;
+  overflow-y: hidden !important;
+}
+
+.done {
+  animation: show 1s linear;
+  animation-fill-mode: forwards;
+}
+
+@keyframes show {
+  40% {
+    visibility: hidden;
+    opacity: 1;
+  }
+  60% {
+    visibility: hidden;
+    opacity: 0;
+  }
+  100% {
+    visibility: visible;
+    opacity: 1;
+  }
+}

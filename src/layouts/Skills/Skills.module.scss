@@ -1,0 +1,89 @@
+.wrapper {
+  width: 100%;
+  display: flex;
+  height: 80vh;
+  margin-bottom: 10em;
+  .title {
+    font-size: 60px;
+    display: flex;
+    text-align: center;
+    margin: 0;
+    height: fit-content;
+    margin-top: 1em;
+    writing-mode: vertical-rl;
+  }
+  .content {
+    border: 3px solid var(--white);
+    width: 86.5%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .describe {
+      padding-left: 50px;
+      width: 55%;
+      font-size: 40px;
+      text-align: center;
+      padding: 0;
+    }
+    .scroller {
+      display: flex;
+      width: 85vw;
+      overflow-x: hidden;
+      -webkit-mask-image: linear-gradient(
+        90deg,
+        transparent,
+        #fff 15%,
+        #fff 85%,
+        transparent
+      );
+      -moz-mask-image: linear-gradient(
+        90deg,
+        transparent,
+        #fff 15%,
+        #fff 85%,
+        transparent
+      );
+      .scroll {
+        display: inline-flex;
+        & div {
+          display: flex;
+          gap: 5em;
+          animation: scroll1 var(--scroll_time) linear infinite;
+          animation-delay: calc(var(--scroll_time) * -1);
+          width: 100%;
+          white-space: nowrap;
+          .scroller_item {
+            font-size: 30px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+          }
+        }
+        & div:nth-child(2) {
+          animation: scroll2 var(--scroll_time) linear infinite;
+          animation-delay: calc(var(--scroll_time) / -2);
+        }
+      }
+    }
+    .reverse {
+      transform: rotate(180deg);
+    }
+  }
+}
+
+@keyframes scroll1 {
+  0% {
+    transform: translateX(calc(100% + 10em));
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+@keyframes scroll2 {
+  0% {
+    transform: translateX(calc(0% + 10em));
+  }
+  100% {
+    transform: translateX(-200%);
+  }
+}
