@@ -15,9 +15,9 @@
   overflow-x: hidden;
   --scroll_time: 20s;
 
-  --dark: #141414;
+  --dark: rgb(20, 20, 20);
   --white: rgba(255, 255, 255, 0.87);
-  --pink: #ff4da6;
+  --pink: rgb(255, 77, 166);
 }
 
 a {
@@ -61,5 +61,4 @@ button:focus-visible {
   --dark: rgba(255, 255, 255, 0.87);
   --pink: #ff4da6;
 }
-
 

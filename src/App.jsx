@@ -4,6 +4,7 @@ import Loading from "./layouts/Loading";
 import NavBar from "./layouts/NavBar";
 import About from "./layouts/About";
 import Skills from "./layouts/Skills";
+import Projects from "./layouts/Projects";
 
 function App() {
   const [textDone, setTextDone] = useState(false);
@@ -36,6 +37,7 @@ function App() {
           <NavBar />
           <About setTextDone={setTextDone} />
           <Skills />
+          <Projects />
         </>
       )}
     </div>

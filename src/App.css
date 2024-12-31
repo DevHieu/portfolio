@@ -10,11 +10,11 @@
 }
 
 @keyframes show {
-  40% {
+  60% {
     visibility: hidden;
     opacity: 1;
   }
-  60% {
+  80% {
     visibility: hidden;
     opacity: 0;
   }
