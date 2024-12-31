@@ -1,6 +1,5 @@
 import styles from "./About.module.scss";
 import TypingText from "../../components/TypingText";
-import { useInView } from "react-intersection-observer";
 import { useEffect, useState } from "react";
 import PropTypes from "prop-types";
 
@@ -17,22 +16,13 @@ export default function About({ setTextDone }) {
     }
   }, [done, setTextDone]);
 
-  const { ref, inView } = useInView({
-    threshold: 0,
-  });
-
   return (
-    <div ref={ref} className={styles.wrapper}>
+    <div className={styles.wrapper}>
       <h1 className={styles.title}>About</h1>
       <div className={styles.content}>
         <div className={styles.left}>
           <h1 className="typing">
-            <TypingText
-              string="Hi i'm Minh Hieu"
-              delay={150}
-              inView={inView}
-              isDone={isDone}
-            />
+            <TypingText string="Hi i'm Minh Hieu" delay={150} isDone={isDone} />
           </h1>
           <div className={styles.description}>
             <h2>A student majoring in software development</h2>
