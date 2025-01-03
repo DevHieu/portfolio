@@ -5,6 +5,7 @@ import NavBar from "./layouts/NavBar";
 import About from "./layouts/About";
 import Skills from "./layouts/Skills";
 import Projects from "./layouts/Projects";
+import Contact from "./layouts/Contact";
 
 function App() {
   const [textDone, setTextDone] = useState(false);
@@ -38,6 +39,7 @@ function App() {
           <About setTextDone={setTextDone} />
           <Skills />
           <Projects />
+          <Contact />
         </>
       )}
     </div>
