@@ -2,7 +2,7 @@
   width: 100%;
   display: flex;
   height: fit-content;
-  margin-bottom: 10em;
+  margin-bottom: 3em;
   .title {
     font-size: 60px;
     display: flex;
@@ -17,359 +17,163 @@
     width: 86.5%;
     display: flex;
     justify-content: space-between;
-    align-items: center;
     box-shadow: inset 0 0 20px rgba(255, 255, 255, 0.5),
       0 0 20px rgba(255, 255, 255, 0.2);
-
-    .left {
-      width: 50%;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      header {
-        position: relative;
-        margin: 100px 0 25px 0;
-        font-size: 2.3em;
-        text-align: center;
-        letter-spacing: 7px;
-      }
-      .contact_form {
-        position: relative;
-        width: 80%;
-        margin: 50px auto 100px auto;
-        display: flex;
-        flex-direction: column;
-
-        input {
-          font-size: 0.875em;
-          width: 470px;
-          height: 50px;
-          padding: 0px 15px 0px 15px;
-
-          background: transparent;
-          outline: none;
-          color: #726659;
-
-          border: solid 1px #b3aca7;
-          border-bottom: none;
-
-          transition: all 0.3s ease-in-out;
-          -webkit-transition: all 0.3s ease-in-out;
-          -moz-transition: all 0.3s ease-in-out;
-          -ms-transition: all 0.3s ease-in-out;
-        }
-
-        input:hover {
-          background: #b3aca7;
-          color: #e2dedb;
-        }
-
-        textarea {
-          width: 470px;
-          max-width: 470px;
-          height: 110px;
-          max-height: 110px;
-          padding: 15px;
-          background: transparent;
-          outline: none;
-          color: #726659;
-          border: solid 1px #b3aca7;
-          transition: all 0.3s ease-in-out;
-          -webkit-transition: all 0.3s ease-in-out;
-          -moz-transition: all 0.3s ease-in-out;
-          -ms-transition: all 0.3s ease-in-out;
-          resize: none;
-        }
-
-        textarea:hover {
-          background: #b3aca7;
-          color: #e2dedb;
-        }
-
-        .submit {
-          width: 502px;
-
-          padding: 0;
-          margin: -5px 0px 0px 0px;
-
-          font-size: 0.875em;
-          color: #b3aca7;
-
-          outline: none;
-          cursor: pointer;
-
-          border: solid 1px #b3aca7;
-          border-top: none;
-          &:hover {
-            color: #e2dedb;
-          }
-        }
-
-        input::-webkit-input-placeholder,
-        textarea::-webkit-input-placeholder {
-          color: #aca49c;
-          font-size: 0.875em;
-        }
-
-        input:focus::-webkit-input-placeholder,
-        textarea:focus::-webkit-input-placeholder {
-          color: #bbb5af;
-        }
-
-        input::-moz-placeholder,
-        textarea::-moz-placeholder {
-          color: #aca49c;
-          font-size: 0.875em;
-        }
-
-        input:focus::-moz-placeholder,
-        textarea:focus::-moz-placeholder {
-          color: #bbb5af;
-        }
-
-        input::placeholder,
-        textarea::placeholder {
-          color: #aca49c;
-          font-size: 0.875em;
-        }
-
-        input:focus::placeholder,
-        textarea::focus:placeholder {
-          color: #bbb5af;
-        }
-
-        input::-ms-placeholder,
-        textarea::-ms-placeholder {
-          color: #aca49c;
-          font-size: 0.875em;
-        }
-
-        input:focus::-ms-placeholder,
-        textarea:focus::-ms-placeholder {
-          color: #bbb5af;
-        }
-
-        /* on hover placeholder */
-
-        input:hover::-webkit-input-placeholder,
-        textarea:hover::-webkit-input-placeholder {
-          color: #e2dedb;
-          font-size: 0.875em;
-        }
-
-        input:hover:focus::-webkit-input-placeholder,
-        textarea:hover:focus::-webkit-input-placeholder {
-          color: #cbc6c1;
-        }
-
-        input:hover::-moz-placeholder,
-        textarea:hover::-moz-placeholder {
-          color: #e2dedb;
-          font-size: 0.875em;
-        }
-
-        input:hover:focus::-moz-placeholder,
-        textarea:hover:focus::-moz-placeholder {
-          color: #cbc6c1;
-        }
-
-        input:hover::placeholder,
-        textarea:hover::placeholder {
-          color: #e2dedb;
-          font-size: 0.875em;
-        }
-
-        input:hover:focus::placeholder,
-        textarea:hover:focus::placeholder {
-          color: #cbc6c1;
-        }
-
-        input:hover::placeholder,
-        textarea:hover::placeholder {
-          color: #e2dedb;
-          font-size: 0.875em;
-        }
-
-        input:hover:focus::-ms-placeholder,
-        textarea:hover::focus:-ms-placeholder {
-          color: #cbc6c1;
-        }
-      }
+    flex-direction: column;
+    header {
+      position: relative;
+      margin: 1em 0;
+      font-size: 50px;
+      letter-spacing: 7px;
+      text-align: center;
     }
-    .right {
-      width: 50%;
+    .contentContainer {
       display: flex;
-      flex-direction: column;
-      align-items: center;
-      header {
-        position: relative;
-        margin: 100px 0 25px 0;
-        font-size: 2.3em;
-        text-align: center;
-        letter-spacing: 7px;
-      }
-      .contact_form {
-        position: relative;
-        width: 80%;
-        margin: 50px auto 100px auto;
+      margin-bottom: 5em;
+      .left {
+        width: 50%;
         display: flex;
         flex-direction: column;
+        align-items: center;
+        .contact_form {
+          position: relative;
+          width: 80%;
+          display: flex;
+          flex-direction: column;
+          & > input,
+          textarea {
+            background: transparent;
+            padding: 15px;
+            outline: none;
+            border: 1px solid var(--white);
+            border-bottom: none;
+            color: var(--white);
+            transition: 250ms;
+            &:hover {
+              background: rgba($color: #ffffff, $alpha: 0.3);
+              color: #333;
+            }
 
-        input {
-          font-size: 0.875em;
-          width: 100%;
-          height: 50px;
-          padding: 0px 15px 0px 15px;
+            &:focus {
+              background: var(--dark) !important;
+              color: #e2dedb;
+            }
+          }
 
-          background: transparent;
-          outline: none;
-          color: #726659;
+          & > textarea {
+            height: 150px;
+            max-height: 150px;
+          }
 
-          border: solid 1px #b3aca7;
-          border-bottom: none;
-
-          transition: all 0.3s ease-in-out;
-          -webkit-transition: all 0.3s ease-in-out;
-          -moz-transition: all 0.3s ease-in-out;
-          -ms-transition: all 0.3s ease-in-out;
-        }
-
-        input:hover {
-          background: #b3aca7;
-          color: #e2dedb;
-        }
-
-        textarea {
-          width: 100%;
-          max-width: 470px;
-          height: 110px;
-          max-height: 110px;
-          padding: 15px;
-          background: transparent;
-          outline: none;
-          color: #726659;
-          border: solid 1px #b3aca7;
-          transition: all 0.3s ease-in-out;
-          -webkit-transition: all 0.3s ease-in-out;
-          -moz-transition: all 0.3s ease-in-out;
-          -ms-transition: all 0.3s ease-in-out;
-          resize: none;
-        }
-
-        textarea:hover {
-          background: #b3aca7;
-          color: #e2dedb;
-        }
-
-        .submit {
-          width: 100%;
-
-          padding: 0;
-          margin: -5px 0px 0px 0px;
-
-          font-size: 0.875em;
-          color: #b3aca7;
-
-          outline: none;
-          cursor: pointer;
-
-          border: solid 1px #b3aca7;
-          border-top: none;
-          &:hover {
-            color: #e2dedb;
+          .submit {
+            border: 1px solid var(--white);
+            &:hover {
+              color: #e2dedb;
+            }
           }
         }
-
-        input::-webkit-input-placeholder,
-        textarea::-webkit-input-placeholder {
-          color: #aca49c;
-          font-size: 0.875em;
+      }
+      .right {
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        & > p {
+          width: 67%;
+          font-size: 20px;
+          margin: 0;
         }
-
-        input:focus::-webkit-input-placeholder,
-        textarea:focus::-webkit-input-placeholder {
-          color: #bbb5af;
+        .link {
+          .linkItem {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            font-size: 22px;
+            & > span {
+              margin-top: 8px;
+            }
+          }
         }
-
-        input::-moz-placeholder,
-        textarea::-moz-placeholder {
-          color: #aca49c;
-          font-size: 0.875em;
-        }
-
-        input:focus::-moz-placeholder,
-        textarea:focus::-moz-placeholder {
-          color: #bbb5af;
-        }
-
-        input::placeholder,
-        textarea::placeholder {
-          color: #aca49c;
-          font-size: 0.875em;
-        }
-
-        input:focus::placeholder,
-        textarea::focus:placeholder {
-          color: #bbb5af;
-        }
-
-        input::-ms-placeholder,
-        textarea::-ms-placeholder {
-          color: #aca49c;
-          font-size: 0.875em;
-        }
-
-        input:focus::-ms-placeholder,
-        textarea:focus::-ms-placeholder {
-          color: #bbb5af;
-        }
-
-        /* on hover placeholder */
-
-        input:hover::-webkit-input-placeholder,
-        textarea:hover::-webkit-input-placeholder {
-          color: #e2dedb;
-          font-size: 0.875em;
-        }
-
-        input:hover:focus::-webkit-input-placeholder,
-        textarea:hover:focus::-webkit-input-placeholder {
-          color: #cbc6c1;
-        }
-
-        input:hover::-moz-placeholder,
-        textarea:hover::-moz-placeholder {
-          color: #e2dedb;
-          font-size: 0.875em;
-        }
-
-        input:hover:focus::-moz-placeholder,
-        textarea:hover:focus::-moz-placeholder {
-          color: #cbc6c1;
-        }
-
-        input:hover::placeholder,
-        textarea:hover::placeholder {
-          color: #e2dedb;
-          font-size: 0.875em;
-        }
-
-        input:hover:focus::placeholder,
-        textarea:hover:focus::placeholder {
-          color: #cbc6c1;
-        }
-
-        input:hover::placeholder,
-        textarea:hover::placeholder {
-          color: #e2dedb;
-          font-size: 0.875em;
-        }
-
-        input:hover:focus::-ms-placeholder,
-        textarea:hover::focus:-ms-placeholder {
-          color: #cbc6c1;
+        .socialList {
+          display: flex;
+          gap: 30px;
+          margin-top: 1em;
+          & a {
+            color: var(--white);
+          }
         }
       }
     }
   }
+
+  & svg {
+    border: 1px solid white;
+    padding: 10px;
+    border-radius: 50%;
+
+    transition: 150ms;
+    background-color: var(--dark);
+    &:hover {
+      color: var(--dark);
+      transition: 350ms;
+      background-color: var(--white);
+      transform: scale(1.2);
+      box-shadow: 0 0 20px rgba(255, 255, 255, 0.8);
+    }
+  }
 }
+
+// input {
+//   font-size: 0.875em;
+//   width: 470px;
+//   height: 50px;
+//   padding: 0px 15px 0px 15px;
+
+//   background: transparent;
+//   outline: none;
+//   color: #726659;
+
+//   border: solid 1px var(--white);
+//   border-bottom: none;
+
+//   transition: all 0.3s ease-in-out;
+//   -webkit-transition: all 0.3s ease-in-out;
+//   -moz-transition: all 0.3s ease-in-out;
+//   -ms-transition: all 0.3s ease-in-out;
+// }
+
+// textarea {
+//   width: 470px;
+//   max-width: 470px;
+//   height: 135px;
+//   max-height: 135px;
+//   padding: 15px;
+//   background: transparent;
+//   outline: none;
+//   color: #726659;
+//   border: solid 1px var(--white);
+//   transition: all 0.3s ease-in-out;
+//   -webkit-transition: all 0.3s ease-in-out;
+//   -moz-transition: all 0.3s ease-in-out;
+//   -ms-transition: all 0.3s ease-in-out;
+//   resize: none;
+// }
+
+// input:hover {
+//   background: rgba($color: #ffffff, $alpha: 0.3);
+//   color: #333;
+// }
+
+// input:focus {
+//   background: var(--dark) !important;
+//   color: #e2dedb;
+// }
+
+// textarea:hover {
+//   background: rgba($color: #ffffff, $alpha: 0.3);
+//   color: #333;
+// }
+
+// textarea:focus {
+//   background: var(--dark) !important;
+//   color: #e2dedb;
+// }
