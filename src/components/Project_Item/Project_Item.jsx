@@ -41,7 +41,7 @@ export default function TypingText({
           <p>{describe}</p>
         </Reveal>
         <div>
-          <a className={styles.button} href={link}>
+          <a className={styles.button} href={link} target="_blank">
             <p>Visit</p>
             <MdOutlineArrowOutward />
           </a>

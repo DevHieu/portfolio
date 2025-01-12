@@ -14,9 +14,11 @@
   -moz-osx-font-smoothing: grayscale;
   overflow-x: hidden;
   --scroll_time: 20s;
-
   --dark: rgb(20, 20, 20);
-  --white: rgba(255, 255, 255, 0.87);
+  --white: rgba(255, 255, 255);
+  --shadow1: rgba(255, 255, 255, 0.5);
+  --shadow2: rgba(255, 255, 255, 0.2);
+  --shadow3: rgba(255, 255, 255, 0),
   --pink: rgb(255, 77, 166);
   animation: showOverflow 4s linear;
 }
@@ -101,3 +103,23 @@ button:focus-visible {
   --pink: #ff4da6;
 }
 
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: var(--white); 
+  width: 8px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(201, 193, 193, 0.87); 
+}

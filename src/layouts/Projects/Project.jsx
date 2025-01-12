@@ -3,7 +3,7 @@ import ProjectsItem from "../../components/Project_Item";
 import data from "../../data/ProjectsData.jsx";
 import { IoIosArrowRoundForward } from "react-icons/io";
 
-export default function Project() {
+export default function Project({ currentMode }) {
   return (
     <div className={styles.wrapper}>
       <h1 className={styles.title}>Projects</h1>
@@ -18,7 +18,9 @@ export default function Project() {
               title={value.title}
               describe={value.describe}
               image={value.image}
-              ascii={value.ascii}
+              ascii={
+                currentMode === "light" ? value.asciiWhite : value.asciiBlack
+              }
               link={value.link}
               key={index}
               isEven={index % 2 == 0 ? false : true}

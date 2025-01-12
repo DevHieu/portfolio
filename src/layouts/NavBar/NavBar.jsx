@@ -1,11 +1,7 @@
 import styles from "./NavBar.module.scss";
-import { FaMoon } from "react-icons/fa";
+import { IoIosSunny, IoIosMoon } from "react-icons/io";
 
-export default function NavBar() {
-  const handleToggle = () => {
-    console.log("change theme");
-  };
-
+export default function NavBar({ toggleTheme, isChecked }) {
   return (
     <div className={styles.wrapper}>
       <img src="image/logo.png" alt="logo" className={styles.logo} />
@@ -14,10 +10,18 @@ export default function NavBar() {
         <div className={styles.item}>Skills</div>
         <div className={styles.item}>Projects</div>
         <div className={styles.item}>Contact</div>
-        <FaMoon
-          className={`${styles.item} ${styles.toggle}`}
-          onClick={handleToggle}
-        />
+        <label className={styles.checkbox}>
+          <input
+            type="checkbox"
+            id="checkbox"
+            onChange={toggleTheme}
+            checked={isChecked}
+            className={styles.toggleBtn}
+          />
+          <span className="checkmark">
+            {isChecked ? <IoIosMoon size={25} /> : <IoIosSunny size={25} />}
+          </span>
+        </label>
       </div>
     </div>
   );
