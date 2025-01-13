@@ -1,8 +1,7 @@
-# React + Vite
+# DevHieu portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Hi. I'm Minh Hieu, or you can call me DevHieu
+I am currently a student majoring in Software Development and am aiming to become a Java backend
+I start this portfolio when i'm 18 years old and i'm using Reactjs to make this portfolio
 
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Visited my website devhieufolio.vercel.app for more information about me.
