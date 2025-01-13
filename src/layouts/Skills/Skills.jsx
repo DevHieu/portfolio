@@ -21,7 +21,7 @@ export default function About() {
   ];
 
   return (
-    <div className={styles.wrapper}>
+    <div className={styles.wrapper} id="Skills">
       <h1 className={styles.title}>Skills</h1>
       <div className={styles.content}>
         <div className={styles.scroller}>

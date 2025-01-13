@@ -32,7 +32,7 @@ const Contact = () => {
   };
 
   return (
-    <div className={styles.wrapper}>
+    <div className={styles.wrapper} id="Contact">
       <h1 className={styles.title}>Contact</h1>
       <div className={styles.content}>
         <header>Contact Me</header>

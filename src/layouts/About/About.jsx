@@ -17,7 +17,7 @@ export default function About({ setTextDone }) {
   }, [done, setTextDone]);
 
   return (
-    <div className={styles.wrapper}>
+    <div className={styles.wrapper} id="About">
       <h1 className={styles.title}>About</h1>
       <div className={styles.content}>
         <div className={styles.left}>

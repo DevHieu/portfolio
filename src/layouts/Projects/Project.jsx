@@ -5,7 +5,7 @@ import { IoIosArrowRoundForward } from "react-icons/io";
 
 export default function Project({ currentMode }) {
   return (
-    <div className={styles.wrapper}>
+    <div className={styles.wrapper} id="Projects">
       <h1 className={styles.title}>Projects</h1>
       <div className={styles.content}>
         <h2>

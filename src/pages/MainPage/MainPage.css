@@ -3,7 +3,9 @@
   transition: 1s;
   overflow-y: hidden !important;
 }
-
+.marginTop {
+  height: 60px;
+}
 .done {
   animation: show 1s linear;
   animation-fill-mode: forwards;
@@ -23,3 +25,5 @@
     opacity: 1;
   }
 }
+
+/* //990px */
